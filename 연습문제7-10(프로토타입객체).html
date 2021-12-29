@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>프로토타입object</title>
+		<script>
+			
+	
+		</script>
+	 </head>
+
+	 
+	 
+	 <body>
+		<h3>BOOK 프로토타입객체 만들기</h3>
+		<hr>
+
+			<script>
+
+				function Book(title, author, price) {
+					this.title = title;
+					this.author = author;
+					this.price = price;
+				}
+			
+				
+				var book = new Book("JAVASCRIPT", "홍길동", 2020);
+
+				document.write("제목 : " + book.title + "<br>");
+				document.write("저자 : " + book.author + "<br>");
+				document.write("가격 : " + book.price + "<br>");
+			
+			</script>
+	 </body>
+</html>
+
+

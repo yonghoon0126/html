@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>방문 시간에 따라 변하는 배경색</title>
+	 </head>
+
+	 
+	 
+	 <body>
+		<h3>페이지 방문 초시간이 짝수이면 violet, 홀수이면 lightskyblue 배경</h3>
+		<hr>
+
+			<script>
+				var current = new Date();		//
+					if(current.getSeconds() % 2 == 0)
+						document.body.style.backgroundColor = "violet";
+					
+					else
+						document.body.style.backgroundColor = "lightskyblue";
+
+					document.write("현재 시간 : ");
+					document.write(current.getHours(), "시,");
+					document.write(current.getMinutes(), "분,");
+					document.write(current.getSeconds(), "초<br>");
+
+			</script>
+	 </body>
+</html>
+
+<!-- 
+getHours() : 0~23사이의 정수 시간 리턴
+getMinutes() : 0~59사이의 정수 분 리턴
+getSeconds() : 0~59사이의 정수 초 리턴
+getMilliseconds() : 0~999사이의 정수 밀리초 리턴
+getTime() : 1979년 1월 1일 0:0:0을 기준으로 현재 시간까지 경과된 밀리초 개수 리턴
+
+setFullYear(year) : year를 년도 값으로 저장(getFullYear() 얻기)
+setMonth(month) : month(0~11)를 달 값으로 저장
+setDate(date) : date(1 ~ 31)를 한달 내의 날짜 값으로 저장
+setHours(hour) : hour(0 ~ 23)을 시간 값으로 저장
+setMinutes(minute) : minute(0 ~ 59)를 시간 값으로 저장
+setMilliseconds(ms) : ms(0 ~ 999)를 시간 값으로 저장(getTime() )
+setTime(t) : 밀리초 단위인 t값으로 시간 저장(getTime() )
+
+toUTCString(ms) : 객체에 든 시간 정보를 UTC문자열로 리턴
+toLocaleString(ms) : 객체에 든 시간 정보를 로컬 표현의 문자열로 리턴
+toLocalTimeString(ms) : 객체에 든 시간 정보를 시간 10:12:30와 같이 표헌
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+

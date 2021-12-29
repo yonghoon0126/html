@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+	
+	<script>
+
+		var text=["빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다",
+					  "한국 고전 50권, 외국 고전 50권을 읽는 목표",
+					  "문제가 많고 잘 정리된 자바스크립트 책을 구입하여 본격적으로 연습문제 풀기"];
+
+		var commentDiv;
+
+		function init() {
+			commentDiv = document.getElementById("commentDiv");		//div
+
+		var liArray = document.getElementsByTagName(  "li" );					//아이템 가져오기
+			for(i = 0; i < liArray.length; i++) {
+			liArray[i].addEventListener("mouseover", over, false);							//마우스 오버 시
+			liArray[i].addEventListener("mouseout", hideCommentDiv, false);			//마우스 아웃 시
+			}
+		}
+
+		function over(e) {//마우스 오버시
+		var n=0;
+			switch(e.target.id) {
+			case "10" : n = 0; break;				// 이벤트 대상
+			case "11" : n = 1; break;
+			case "12" : n = 2; break;
+			case "13" : n = 3; break;
+			}
+
+		setCommentDiv(text[n], e);				//해당 아이템(li)에 툴팁텍스트
+		}
+
+		function setCommentDiv(comment, e) {			//툴팁텍스트, 이벤트 받음
+			commentDiv.innerHTML = comment;
+			commentDiv.style.left = e.clientX + "px";  
+			commentDiv.style.top = e.clientY + "px";
+			commentDiv.style.border = "1px solid red";			// 테두리
+			commentDiv.style.background     = "powderblue";			// 바탕색
+			commentDiv.style.visibility = "visible";								// 화면에 표시여부
+			commentDiv.style.width = "200px";
+			commentDiv.style.height = "80px";
+		}
+
+		function hideCommentDiv() {						 //마우스 벗어났을 때
+			commentDiv.style.visibility = hidden;
+		}
+
+	</script>
+ </head>
+ 
+ 
+ 
+	<body onload="init()">
+
+		<h3>아이템에 마우스를 올리면 설명 출력</h3>
+		<hr>
+
+			<p>겨울 방학 때 하고 싶은 것들</p>
+
+			<ul>
+				<li id="l0"> 자전거로 대한민국 일주</li>
+				<li id="l1">책 100권 읽기</li>
+				<li id="l2">철인 3종 경기 준비</li>
+				<li id="l3">자바스크립트 정복</li>
+			</ul> 
+
+			<div id="commentDiv" style="position:absolute"></div>
+
+	</script>
+ </body>
+</html>

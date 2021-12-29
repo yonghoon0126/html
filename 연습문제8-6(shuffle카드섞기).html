@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title></title>
+	 		
+			<script>
+
+				// z-index, left, top 모두 초기화
+				var imgArray = document.getElementsByTagName("img");
+					for(i=0; i<imgArray.length; i++) {					//이미지 쌓아놓기
+					var obj = imgArray[i];
+					obj.style.zIndex=i;
+					obj.style.left = "10px";
+					obj.style.top = "20px";
+					obj.onclick = shuffle;									// onclick 리스너 등록
+					}
+
+				function shuffle() {											//클릭하면 맨위에 것이 맨아래로 바뀌게 
+					for(i=0; i<imgArray.length; i++) {
+					var obj = imgArray[i];
+					obj.style.zIndex++;
+					obj.style.zIndex %= imgArray.length; 
+					} 
+				}
+			
+			</script>
+
+	 </head>
+
+
+	 
+	 
+	 
+	 <body>
+		<h3></h3>
+		<hr>
+
+			<img src="images/spade-A.png">
+			<img src="images/spade-3.png">
+			<img src="images/spade-7.png">
+
+		<script>
+
+		
+
+		</script>
+
+
+	 </body>
+</html>
+
+<!-- 문제6] '카드이미지'를 클릭할때마다 다음카드이미지가 출력되게 하시오.
+
+아래 빈칸을 채우시오.
+
+​
+
+z-index 스타일 속성사용하기
+
+-------------------------------hr
+
+카드이미지배치---<div>로 <이미지들 배치(이미지 3개이상)>를 감싼다.
+
+​
+
+<script>
+
+// z-index, left, top 모두 초기화
+
+var imgArray = (     1   );//이미지 가져오기
+
+for(        이미지길이 만큼          ) {   //이미지 쌓아놓기
+
+(             2            )//obj에저장
+
+(             3            ) =    i ;      //이미지 순서
+
+obj.style.left = "10px";
+
+obj.style.top = "20px";
+
+obj.onclick = shuffle; // onclick 리스너 등록//
+
+}
+
+function shuffle() {//클릭하면 맨위에 것이 맨아래로 바뀌게 
+
+for(i=0; i<imgArray.length; i++) {
+
+(          4     ) //obj저장
+
+obj.style.zIndex++;
+
+obj.style.zIndex %= imgArray.length; 
+
+}
+
+}
+
+</script> -->

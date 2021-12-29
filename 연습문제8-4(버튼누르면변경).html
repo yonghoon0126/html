@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title></title>
+
+			<style>
+				span{
+						color:white;
+						}
+
+			</style>
+
+			<script>
+				function change()	{
+					var spanArray =
+						document.getElementsByTagName("span");
+							for(var i = 0; i < spanArray.length; i++)	{
+								var span = spanArray[i];
+								span.style.color = "brown";
+							}
+				}
+			</script>
+
+	 </head>
+
+
+	 
+	 
+	 
+	 <body>
+		<h3>다음 빈 곳에 숨은 단어?
+			<input type="button" value="result-show" onclick="change()">
+		</h3>
+		<hr>
+
+			I (<span>		집에	 </span>) you.<p>
+			CSS is Cascading (<span>		가고	 </span>) Sheet.<p>
+			응답하라 (<span>		싶다	 </span>).<p>
+
+			
+	 </body>
+</html>

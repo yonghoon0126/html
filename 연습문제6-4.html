@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>요일</title>
+		<script>
+
+
+		</script>
+	 </head>
+
+	 
+	 
+	 
+	 <body>
+		 <h3>월화수목금토일</h3>
+		 <hr>
+			
+			<script>
+
+					var day = prompt("무슨 요일인가요?", "");
+						
+						switch(day) {
+							case "월" : work = "출근";
+							case "화" : work = "출근";
+							case "수" : work = "출근";
+							case "목" : work = "출근";
+							case "금" : work = "출근";
+								document.write(day + "요일은 " + work + "하세요");
+								break;
+
+							case "토" : work = "휴일";
+							case "일" : work = "휴일";
+								document.write(day + "요일은  " + work + "을 즐기세요.");
+								break;
+			
+							default : 
+								document.write(day + "요일은 없습니다.");
+						}
+			</script>
+
+	 </body>
+</html>
+
+
+

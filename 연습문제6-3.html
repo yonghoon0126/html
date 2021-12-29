@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>제곱 표 만들기</title>
+		
+		<style>
+			table{
+				border-collapse:collapse;
+				}
+
+			td{
+				border:1px	solid;
+				width:50px;
+				}
+		</style>
+
+
+
+	 </head>
+
+	 
+	 
+	 
+	 <body>
+		 <h3>제곱 표 만들기</h3>
+		 <hr>
+
+			<script>
+				document.write("<table><tr><td>N</td>");
+					for(var i =0;i<=9;i++){
+					document.write("<td>"+ i +"</td>");
+					}
+
+				document.write("</tr><tr><td>N2</td>");
+					for(var i =0;i<=9;i++){
+					document.write("<td>"+ i*i +"</td>");
+					}
+				document.write("</tr></table>");
+			</script>
+		 
+	 </body>
+</html>
+

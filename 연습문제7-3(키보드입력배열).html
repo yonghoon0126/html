@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>키보드 입력/배열 정렬</title>
+		<script>
+
+			
+			
+		</script>
+	 </head>
+
+	 
+	 
+	 <body>
+		<h3>키보드 입력/배열 정렬</h3>
+		<hr>
+
+			<script>
+
+					// 입력받은 정수 배열로
+					var values=[];
+						for(var i=0; i<5; i++)	{
+							var m = prompt("정수 입력", "0");
+							var n = parseInt(m);
+							values[i] = n;
+						}
+
+					// 배열 출력
+					document.write("입력된 수의 배열<br>");
+						for(var i=0; i<5; i++)	{
+						document.write(values[i]+" ");
+						}
+						document.write("<hr>");
+					
+					// 역순으로 재정렬
+					values.reverse();
+
+					document.write("역순으로 재정렬된 배열<br>");
+					for(i = 0; i < values.length; i++)
+						document.write(values[i] + " ");
+		
+			</script>
+	 </body>
+</html>

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>산술 연산</title>
+	
+		<script>
+		
+				function digit8(v) { // 숫자 v를 8비트 2진수로 변환
+				
+					var str="";
+						
+						for(i=0; i<8; i++, v<<=1) {
+						
+							if((v & 0x80)) str += "1";
+							
+							else str += "0";
+							}
+						
+						return str;
+						}
+		</script>
+
+	 </head>
+
+	 
+	 
+	 
+	 <body>
+		 <h3>산술 연산</h3>
+		 <hr>
+			<script>
+				var x=32;								
+				var total=100+x*2/4-3;		// totla은 113
+				var div=x/10;						// div는 3.2
+				var mod=x%2;						// x를 2로 나눈 나머지, 0
+
+				document.write("x : " + x + "<br><br>");
+				document.write("100 + x*2/4 - 3=" + total + "<br>");
+				document.write("x/10=" + div + "<br>");
+				document.write("x%2=" + mod + "<br>");
+			
+			</script>
+
+
+		<hr size="5"		color="red">
+
+			<h3>대입 연산</h3>
+
+				<script>
+				 
+
+					var x=3, y=3, z=3;								
+					document.write("x = " + x + ",y = " + y);
+					document.write(", z = " + z + "<br><br>");
+
+					x += 3;		// x=x+3	-> x=6
+					y *= 3;		// y=y*3	-> y=9
+					z %= 2		// z=z%2	->	z=1
+
+					document.write("x += 3; 실행 후, x = " + x +  "<br>");
+					document.write("y *= 3; 실행 후, y = " + y +  "<br>");
+					document.write("z %= 3; 실행 후, z = " + z);
+				
+				</script>
+
+
+		<hr size="5"		color="red">
+
+
+			<h3>비교 연산</h3>
+
+				<script>
+
+					var x=13, y=7;								
+					
+					document.write("x = " + x + ",y = " + y + "<br><br>");
+					document.write("x == y :  " + (x==y) + "<br>");
+					document.write("x != y :  " + (x!=y) + "<br>");
+					document.write("x >= y :  " + (x>=y) + "<br>");
+					document.write("x > y :  " + (x>y) + "<br>");
+					document.write("x <= y :  " + (x<=y) + "<br>");
+					document.write("x < y :  " + (x<y) + "<br>");
+
+				</script>
+
+		<hr size="5"		color="red">
+
+
+			<h3>논리 연산</h3>
+
+				<script>
+
+					var x=true,	 y=false;								
+					
+					document.write("x = " + x + ",y = " + y + "<br><br>");
+					document.write("x && y :  " + (x&&y) + "<br>");
+					document.write("x || y :  " + (x||y) + "<br>");
+					document.write("!x :  " + (!x) + "<br>");
+					document.write("<hr>");
+					document.write("(3>2) && (3<4) :  " + ((3>2)&&(3<4)) + "<br>");
+					document.write("(3==-2 || (-1<0) : " + ((3==2)||(-1<0)));
+
+				</script>
+
+
+		
+		<hr size="5"		color="red">
+
+
+			<h3>조건 연산</h3>
+
+				<script>
+
+					var a=3, b=5;
+
+						document.write("a=" + a + ", b=" + b + "<br><br>");
+						document.write("두수의 차이 : " + ((a>b)?(a-b):(b-a)));
+
+
+				</script>
+		
+		
+		
+		<hr size="5"		color="red">
+
+
+			<h3>비트 연산과 시프트 연산</h3>
+
+				<script>
+				// head에도 script있음
+
+
+					var x=10, y=3;
+						document.write("<pre>");
+						document.write("x=" + x + ", y=" + y + "<br>"); 
+						document.write("x : 		" + digit8(x) + "<br>"); 
+						document.write("y : 		" + digit8(y) + "<br>"); 
+						
+						document.write("<hr>");
+						
+						document.write("x & y  : 		" + digit8(x&y) + "<br>");
+						document.write("x | y  : 		" + digit8(x|y) + "<br>");
+						document.write("x ^ y  : 		" + digit8(x^y) + "<br>");
+						document.write("~x     : 		" + digit8(~x) + "<br>");
+						
+						document.write("<hr>");
+						
+						document.write("x << 1 : 		" + digit8(x<<1) + " (" + (x<<1) + ")<br>");
+						document.write("x >> 1 : 		" + digit8(x>>1) + " (" + (x>>1) + ")<br>");
+						document.write("x >>> 1: 	" + digit8(x>>>1) + " (" + (x>>>1) + ")");
+						document.write("</pre>");
+
+
+				</script>
+
+						
+
+		<hr size="5"		color="red">
+			
+			
+			<h3>문자열 연산</h3>
+
+				<script>
+
+					document.write("abc" + 23 + "<br>");
+					document.write(23 + "abc" + "<br>");
+					document.write(23 + "35" + "<br>");
+					document.write(23 + 35 + "<br>");
+					document.write(23 + 35 + "abc" +"<br>");
+					document.write("abc" + +23 + 35 + "<br><hr>");
+					
+					var name="kitae";
+					document.write(name=="kitae");
+					document.write("<br>");
+					document.write(name > "park");
+
+				</script>
+
+
+
+		<hr size="5"		color="red">
+			
+			
+			<h3>if-else를 이용한 학점 매기기</h3>
+
+				<script>
+
+					var grade;
+					var score = prompt("황기태 님 점수를 입력하세요", 100);
+					score = parseInt(score);		// 문자열을 숫자로 바꿈
+					
+						if(score >= 90)					// score가 90 이상
+							grade = "A";
+
+						else if(score >= 80)			// 80 이상 90 미만
+							grade = "B";
+						
+						else if(score >= 70)			// 70 이상 80 미만
+							grade = "C";
+						
+						else if(score >= 60)			// 60 이상 70 미만
+							grade = "D";
+						
+						else									// 60 미만
+							grade = "F";
+
+					document.write(score + "는 " + grade + "입니다.<br>")
+
+
+				</script>
+
+
+
+	 </body>
+</html>

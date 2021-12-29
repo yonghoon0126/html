@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>onload로 이미지 크기 출력</title>
+	 		
+		<script>
+			
+			function changeImage() {
+				var sel = document.getElementById("sel");
+				var img = document.getElementById("myImg");
+
+				// - 이미지가 출력되는 과정은 :
+				// 1. 파일로부터 로딩하는 과정과
+				// 2. 이미지가 출력되는 과정
+				// 항상 이미지 로딩이 완료된 후에야 이미지를 사용 할 수 있다.
+				
+					img.onload = function () {							// 이미지 크기 출력
+					 var mySpan = document.getElementById("mySpan");
+					mySpan.innerHTML = img.width + "x" + img.height;
+				}
+				
+				// var index= sel.selectedIndex;						// 선택된 옵션 인덱스
+				// img.src = sel.options[index].value;			// <option>의 value 속성
+				// alert('선택값 : '+ i +". " + sel.option[i].text + sel.textContent + ",");
+
+				var i = sel.selectedIndex;
+				img.src = sel.value;
+				alert('선택값 : ' + i + ", " + sel.options[i].textContent + "\n" + sel.textContent);
+
+			}
+
+		</script>
+
+	 </head>
+
+
+	 
+	 
+	 
+	 <body onload = "changeImage()">
+		<h3>onload로 이미지 크기 출력</h3>
+		<hr>
+			
+			<form>
+				<select id = "sel"	onchange = "changeImage()">
+					<option value = "images/apple.png">사과
+					<option value = "images/banana.png">바나나
+					<option value = "images/mango.png">망고
+				</select>
+
+				<span id = "mySpan">이미지 크기</span>
+			</form>
+
+				<p><img id = "myImg"	src = "images/apple.png"	alt = ","></p>
+
+	 </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>랜덤배열 div출력</title>
+		<style>
+
+			div{
+				display:inline-block;
+				 height:50px;
+				width:140px;
+				padding-top:15px;
+				text-align:center;
+				}
+			
+		</style>
+	 </head>
+
+	 
+	 
+	 <body>
+		<h3>랜덤 배열 div출력</h3>
+		<hr>
+
+			<script>
+				
+				function newColor() {
+
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+					return "rgb(" + r + "," + g + "," + b + ")";
+					}
+
+				for(i=0; i<16; i++) {
+					var str = "<div style='background-color:";
+					var color = newColor(); 
+					str += color;
+					str += "'>" + color + "</div>";
+					document.write(str);
+				}
+			
+			</script>
+	 </body>
+</html>

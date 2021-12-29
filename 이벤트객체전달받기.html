@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>이벤트 객체 전달받기</title>
+
+	 </head>
+
+
+	 
+	 
+	 
+	 <body>
+		<h3>이벤트 객체 전달받기</h3>
+		<hr>
+			
+			<p id="p">마우스를 올려보세요.</p>
+				
+				<button onclick = "f(event)">클릭 하세요</button>
+					<!-- event : 예약어, 강제로 이벤트값 보낼때는 꼭 event를 사용
+					이벤트가 발생이 되면 기본적으로 전달되는 매개값은 항목(데이터, index값, 이벤트값)이 들어간다.
+					상황은 묵시적으로 처리된다.
+					 -->
+			<script>
+				
+				function f(e)	{				// e는 현재 발생한 이벤트 객체
+					console.log(e.type + ", " + e);
+					// console.log(e.type);
+					alert(e.type + ", " + e);				// 이벤트 종류 출력
+					// alert(e.type);				// 이벤트 종류 출력
+				}
+			
+				document.getElementById("p").onmouseover = f;
+			
+			
+			</script>
+	 </body>
+</html>

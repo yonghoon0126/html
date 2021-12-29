@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>방문 시간에 따라 변하는 배경색</title>
+	 </head>
+
+	 
+	 
+	 <body>
+		<h3>페이지 방문 초시간이 짝수이면 violet, 홀수이면 lightskyblue 배경</h3>
+		<hr>
+
+			<script>
+				
+				var i = 0;
+				
+				var id = setInterval( function()	{
+				// setInterval(실행할 함수, 지연시간);
+
+						i++;
+						if(i >= 10) {
+							alert("10번을 반복했습니다.");
+							clearInterval(id);		// 반복 함수 중지
+				}
+
+
+								var current = new Date();		// 현재 시간을 가진 Date 객체 생성
+									if(current.getSeconds() % 2 == 0)
+										document.body.style.backgroundColor = "violet";
+									
+									else
+										document.body.style.backgroundColor = "powderblue";
+
+									document.write("현재 시간 : ");
+									document.write(current.getHours(), "시,");
+									document.write(current.getMinutes(), "분,");
+									document.write(current.getSeconds(), "초<br>");
+							
+				}, 1000);		//		1/1000초
+
+			</script>
+	 </body>
+</html>

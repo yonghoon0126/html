@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+	
+	<style>
+		
+		div{
+			border-top : 0px;		border-right:0px;
+			background : yello;
+			border-bottom : 0px;		position absolute;
+			left : 200px;		border-left : 0px;		top : 100px;
+			}	
+
+	</style>
+	
+	
+	
+	<script type = "text/javascript">
+
+		// DOM2방식
+		
+		function answr()	{
+			var resutl = '';
+
+			var sung = document.getElementsByName("sung");
+			var pyeoga = document.getElementsByName("pyeoga");
+			var see = document.getElementsByName("see");
+			var remark = document.getElementsByName("remark");
+			console.log('비고 = ' + remark[0].value);
+
+			// 성별
+			if(f.sung[0].checked==true)
+				result += f.sung[0].value + "\n";
+			else
+				result += f.sung[1].value + "\n";
+
+			// 평가
+			if(f.pyeoga[0].checked==true)
+				result += f.pyeoge[0].value + "\n"
+			}
+
+
+			// 검색엔진
+			for(i = 0; i < see.length; i++)	{
+				if(see[i].checked)
+					result += see[i].value + "\n"
+			}
+
+
+			// 하고싶은 말
+			result += "\n" + remark[0].value;
+			alert(result);
+		
+		
+		}
+
+	</script>
+ 
+ </head>
+ 
+ 
+ 
+ <body>
+
+		<form id = "f">
+
+			<h1 style = "text-align : center">온라인 앙케이트</h1>
+
+			1. 성별?<br>
+				남<input type = "radio"	name = "sung"		value = "남"		checked>
+				여<input type = "radio"	name = "sung"		value = "여">
+
+				<p><br>
+
+			2. 본사의 제품을 평가한다면?<br>
+				매우만족 : 
+				<input type = "radio"	name = "pyeoga"		value = "매우만족"		checked>
+				그저 그렇다 :
+				<input type = "radio"	name = "pyeoga"		value = "보통">
+				불만족스럽다 :
+				<input type = "radio"	name = "pyeoga"		value = "불만족">
+
+				<p><br>
+
+			3. 가장 자주 사용하는 검색엔진은?<br>
+				심마니 :
+				<input type = "checkbox"	name = "see"	value = "심마니"		checked>
+				네이버 정보탐정 :
+				<input type = "checkbox"	name = "see"	value = "네이버"		checked>
+				야후 :
+				<input type = "checkbox"	name = "see"	value = "야후"		checked>
+				라이코스 :
+				<input type = "checkbox"	name = "see"	value = "라이코스"		checked>
+				알타비스타 :
+				<input type = "checkbox"	name = "see"	value = "알타비스타">
+
+				<p><br>
+
+			4. 본사에게 하고 싶은 말은?
+				<textarea name = "remark"		rows = "5"	cols = "70">빠른 검색을 하고 싶어요.</textarea><br>
+				<input type = "button"		value = "앙케이트 작성"		onclick = "answr()">
+				<input type = "button"		value = "앙케이트 취소"		onclick = "answr()">
+
+
+		</form>
+
+
+		
+	<script>
+		
+		
+
+
+	</script>
+ </body>
+</html>
+

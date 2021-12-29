@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>별찍기</title>
+		<script>
+			
+				function star(n) {							 
+			
+				var m = parseInt(n);							
+				
+					if(isNaN(m) || m < 1) { 
+						alert("잘못입력하셨습니다.");
+						return;
+					}
+				
+					for(var i=1; i<=n; i++) {					 
+						for(var j=1; j<=i; j++){
+					document.write("*");
+						}
+					document.write("<br>");
+				}  
+			}
+
+		</script>
+	 </head>
+
+	 
+	 
+	 
+	 <body>
+		 <h3>별을 찍어보자</h3>
+		 <hr>
+			
+			<script>
+				var n = prompt("별을 몇개 찍으실건가요?","")
+
+				star(n);
+			
+			
+			
+			</script>
+
+	 </body>
+</html>
+
+

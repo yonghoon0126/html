@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title></title>
+
+			<style>
+				span {
+						visibility : hidden;
+						color : blue;
+						}
+			</style>
+
+			<script>
+				function show() {
+
+					var objArray = document.getElementsByTagName("span");
+						for(var i=0; i<objArray.length; i++) {
+						var obj = objArray[i];
+
+						var v=obj.style.visibility;
+							if(v== "hidden")
+							obj.style.visibility = "visible";
+
+							else
+							obj.style.visibility = "hidden"; 
+						}
+					}
+			</script>
+
+	 </head>
+
+
+	 
+	 
+	 
+	 <body>
+		<h3>다음 빈 곳에 숨은 단어?
+			<input type="button" value="result-show" onclick="show()">
+		</h3>
+		<hr>
+
+			I (<span id="span">		집에	 </span>) you.<p>
+			CSS is Cascading (<span>		가고	 </span>) Sheet.<p>
+			응답하라 (<span>		싶다	 </span>).<p>
+
+			
+	 </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+	
+	<script>
+	
+		function drawImage()	{
+
+			var found = null;
+			var fruits = document.getElementsByName("fruit");
+			var img = document.getElementById("fruitimage");
+
+			for(var i = 0; i < fruits.length; i++)	{
+				if(fruits[i].checked == true)	{
+					found = fruits[i];
+				}
+			}
+			img.src = found.value;
+		}
+
+
+	</script>
+ 
+ </head>
+ 
+ 
+ 
+ <body>
+	<h3></h3>
+	<hr>
+
+	<form>
+		<input type="radio" name="fruit" value="images/banana.png" onclick = "drawImage()">바나나
+		<input type="radio" name="fruit" value="images/mango.png"	onclick = "drawImage()">망고
+		<input type="radio" name="fruit" value="images/apple.png"	onclick = "drawImage()">사과
+		<br>
+		<img id = "fruitimage"	src="images/banana.png"	alt = "">
+	
+	</form>
+
+ </body>
+</html>
+
+
+
+<!-- 
+문제2] 아래 이미지를 참고하여 레디오버튼을 클릭하면 해당 이미지가 나오도록 하시오.
+
+라디오 버튼을 클릭하면 이미지를 출력합니다.
+
+-----------------------hr
+
+바나나(라디오버튼)  망고(라디오버튼)    사과(라디오버튼)
+
+사과이미지 -->
