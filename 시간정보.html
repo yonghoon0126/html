@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <title>시간 정보를 입력하는 폼 활용</title>
+	 </head>
+	
+	 
+	 <body>
+		<h3>시간 정보 입력 HTML5 폼 요소들<h3> 
+			초기 세팅 : 2021년 11월 24일 오전 09시 50분(10초 32)<br>
+			시간을 변경해보세요.
+		<hr>
+
+			<form>
+				<pre>
+					month : <input type="month"		value="2021-11"><br> 
+					week : <input type="week"		value="2021-W47"><br> 
+					date : <input type="date"		value="2021-11-24"><br> 
+					time : <input type="time"		value="09:50"><br> 
+					local : <input type="datetime-local"		value="2021-11-24T09:50:10.32"<br> 
+				</pre>
+			</form>
+	 </body>
+
+
+
+<p/><br>
+<hr size="5"		color="red">
+
+
+
+
+	<body>
+		<h3>시간 정보 입력</h3>
+		<h3>생일 축하합니다</h3>
+		<hr>
+		당신의 생일은 1992년 01월 26일 입니다. 틀리면 수정하시고 파티 시간과 장소를 입력하세요.
+		<hr>
+			<form>
+				<table>
+					<tr>
+						<td>생일</td>
+						<td><input type="date"		value="1992-01-26"></td>
+					</tr>
+
+					<tr>
+						<td>생일 파티 시간</td>
+						<td><input type="time"></td>
+					</tr>
+
+					<tr>
+						<td>생일 파티 장소</td>
+						<td><input type="text"></td>
+					</tr>
+				</table>
+			</form>
+		</body>
+
+
+
+
+<p/><br>
+<hr size="5"		color="red">
+
+
+
+
+	<body>
+		<h3>숫자 입력</h3>
+		<h3>홈 제어 시스템 - 온도 조절</h3>
+		<hr>
+			<form>
+				지속시간 (0.0 ~ 10.0시간) :		
+				<input type="number"	min="0.0"	max="10.0"	step="0.5"><br><br>
+
+				온도 설정 : 10&deg;		
+				<input type="range"		min="10"		max="30"		list="temperatures">30&deg;
+
+				<datalist id="temperatures">
+					<option value="12"	label="Low">
+					<option value="20"	label="Medium">
+					<option value="28"	label="High">
+				</datalist>
+			</form>
+		</body>
+
+
+
+
+<p/><br>
+<hr size="5"		color="red">
+
+<!--
+email,url같은 텍스트가 특정 형식에 맞게 입력되었는지 기본적으로 브라우저에서 검사
+submit버튼이 클릭되면 웹서버로 전송하기 전에 형식 검사가 실행된다.
+
+email주소의 형식에 맞지 않으면 오류 메시지를 출력하고 서버로 전송하지 않는다.
+
+tel : 유효성 검사를 브라우저에서 자동으로 하지 않는다.
+		유효성 검사하려면 검사 pattern을 주어야한다.
+
+pattern="\d{3} - \d{3,4} - \d{4}"
+title="휴대폰 번호는 3자리의 숫자 - 3자리에서 4자리 - 4자리 숫자로 입력하세요."
+-->
+
+
+	<body>
+		<h3>형식을 가진 텍스트 입력</h3>
+		<h3>회원 정보를 입력해주세요.</h3>
+		<hr>
+			<form>
+				email :
+					<input type="email"	placeholder="id@host"><br>
+				홈페이지 : 
+					<input type="url"	placeholder="http://"><br>
+				전화번호 : 
+					<input type="tel"	pattern="\d{3} - \d{3,4} - \d{4}"
+					title="휴대폰 번호는 3자리의 숫자 - 3자리에서 4자리 - 4자리 숫자로 입력하세요."
+					placeholder="010-1234-5678">
+					<input type="submit"		value="확인"><br><br>
+		<hr>
+				검색어 : 
+					<input type="serch"		placeholder="검색어">
+					<input type="button"		value="검색">
+					<input type="submit"		value="보내기">
+					
+			</form>
+		</body>
+				
+
+
+
+
+
+<p/><br>
+<hr size="5"		color="red">
+
+
+
+
+	<body>
+		<h3>폼 입력 그룹으로 묶기</h3>
+		<h3>회원 정보를 입력해주세요.</h3>
+		<hr>
+			<form>
+				<fieldset>
+			
+					<legend>회원정보</legend>
+						이메일 : 
+							<input type="email"><br>
+						홈페이지 :
+							<input type="url"><br>
+						전화번호 :
+							<input type="tel">
+				</fieldset>
+
+				<small>질문 : Tel. 010-111-1111</small>
+			
+			</form>
+		</body>
+
+
+
+
+
+
+
+
+<p/><br>
+<p/><br>
+<p/><br>
+<p/><br>
+<p/><br>
+<p/><br>
+<p/><br>
+</html>

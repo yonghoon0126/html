@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>prompt</title>
+	 </head>
+
+	 
+	 
+	 
+	 <body>
+		<script>
+			var ret=prompt("이름을 입력하세요","황기태");
+				if(ret==null){
+					document.write("<h3>취소 버튼이나 다이얼 로그를 닫은 경우</h3>")
+				}
+				
+				else if(ret==""){
+					document.write("<h3>문자열 입력 없이 확인 버튼 누른 경우</h3>")			
+				}
+				
+				else{
+					document.write("<h3>입력한 값은 "+ret+"입니다</h3>")			
+				}
+
+			
+			ret=confirm("전송할까요?");
+				if(ret==true){
+						document.write("<h3>확인 버튼을 눌렀습니다.</h3>")		
+				}
+				
+				else{
+						document.write("<h3>취소 버튼을 눌렀습니다.</h3>")			
+				}
+
+			
+			alert("클릭하였습니다");
+
+
+
+		</script>
+	  
+	 </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>함수</title>
+		
+		<script>
+			function adder(a, b, c=10) {			// 함수 작성
+				var sum;
+				sum = a + b + c;
+				return sum;
+			}
+	 
+		</script>
+	 </head>
+
+	 
+	 
+	 
+	 <body>
+		 <h3>함수 adder()</h3>
+		 <hr>
+			
+			<script>
+				
+				var n = adder(24567, 98374);					// 함수 호출
+				var n1 = adder(2, 9, 15);					// 함수 호출
+					
+					document.write("24567 + 98374는 " + n + "<br>");
+					document.write("n1 = "+ n1);
+			
+			</script>
+
+	 </body>
+</html>
